@@ -36,3 +36,4 @@ async function remove(id) {
   await fetch(`${API}/tasks/${id}`, {method:"DELETE"});
   loadTasks();
 }
+
