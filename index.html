@@ -1,16 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-  <title>Mi Lista de Tareas</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tareas (To-Do List)</title>
+    <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
-  <h1>Mi Lista de Tareas</h1>
+    <div class="container">
+        <h1>✅ Mi Lista de Tareas</h1>
+        
+        <div class="input-group">
+            <input type="text" id="input-task" placeholder="Escribe una nueva tarea..." autofocus>
+            <button onclick="addTask()">Añadir Tarea</button>
+        </div>
+        
+        <ul id="list" class="task-list">
+            </ul>
+    </div>
 
-  <input id="input-task" placeholder="Escribe una nueva tarea...">
-  <button onclick="addTask()">Añadir Tarea</button>
-
-  <ul id="list"></ul>
-
-  <script src="app.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
