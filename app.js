@@ -3,7 +3,6 @@ const API = "https://app-py-to-dolist.onrender.com";
 async function loadTasks() {
   const resp = await fetch(`${API}/tasks`);
   const data = await resp.json();
-  const port = process.env.PORT || 18012 
 
   const list = document.getElementById("list");
   list.innerHTML = "";
@@ -37,6 +36,7 @@ async function remove(id) {
   await fetch(`${API}/tasks/${id}`, {method:"DELETE"});
   loadTasks();
 }
+
 
 
 
